@@ -32,7 +32,7 @@
         </table>
 
         <div class="mt-3">
-            <a href="{{ route('admin.users.index') }}" class="btn btn-primary">{{ __('messages.go_back') }}</a>
+            <a href="{{ url('admin/users') }}" class="btn btn-primary">{{ __('messages.go_back') }}</a>
         </div>
     </div>
 @stop

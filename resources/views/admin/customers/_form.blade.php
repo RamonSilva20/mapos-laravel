@@ -1,6 +1,6 @@
     <form role="form" action="{{ $customer->exists
-        ? route('admin.customers.update', ['customer' => $customer->getKey()])
-        : route('admin.customers.store') }}" method="POST">
+        ? url('admin/customers/update', ['customer' => $customer->getKey()])
+        : url('admin/customers/store') }}" method="POST">
         @method($customer->exists ? 'PUT' : 'POST')
         @csrf
         <div class="row p-3">
@@ -162,7 +162,7 @@
 
         <div class="card-footer">
             <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> {{ __('messages.save') }}</button>
-            <a class="btn btn-light" href="{{ route('admin.customers.index') }}"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
+            <a class="btn btn-light" href="{{ url('admin/customers') }}"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
         </div>
 
     </form>

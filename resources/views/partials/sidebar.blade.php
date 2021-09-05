@@ -1,11 +1,11 @@
-<nav id="sidebarMenu" class="sidebar d-md-block bg-primary text-white collapse" data-simplebar>
+<nav id="sidebarMenu" class="sidebar d-md-block bg-light collapse" data-simplebar>
     <div class="sidebar-inner pt-3">
-        <a href="{{ url('/admin/dashboard') }}" class="brand"><img src="{{ asset('img/logo.svg') }}"></a>
+        <a href="{{ url('/admin/dashboard') }}" class="brand"><img src="{{ url('img/logo.png') }}"></a>
         <ul class="nav flex-column">
-            <li class="nav-item {{ Request::segment(2) == 'dashboard' ? 'active' : '' }}"><a href="{{ route('admin.dashboard.index') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-tv"></span></span> <span>Dashboard</span></a></li>
-            <li class="nav-item {{ Request::segment(2) == 'customers' ? 'active' : '' }}"><a href="{{ route('admin.customers.index') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-star"></span></span> <span>{{ __('messages.customers') }}</span></a></li>
-            <li class="nav-item {{ Request::segment(2) == 'services' ? 'active' : '' }}"><a href="{{ route('admin.services.index') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-cog"></span></span> <span>{{ __('messages.services') }}</span></a></li>
-            <li class="nav-item {{ Request::segment(2) == 'products' ? 'active' : '' }}"><a href="{{ route('admin.products.index') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-box"></span></span> <span>{{ __('messages.products') }}</span></a></li>
+            <li class="nav-item {{ Request::segment(2) == 'dashboard' ? 'active' : '' }}"><a href="{{ url('admin/dashboard') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-tv"></span></span> <span>Dashboard</span></a></li>
+            <li class="nav-item {{ Request::segment(2) == 'customers' ? 'active' : '' }}"><a href="{{ url('admin/customers') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-star"></span></span> <span>{{ __('messages.customers') }}</span></a></li>
+            <li class="nav-item {{ Request::segment(2) == 'services' ? 'active' : '' }}"><a href="{{ url('admin/services') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-cog"></span></span> <span>{{ __('messages.services') }}</span></a></li>
+            <li class="nav-item {{ Request::segment(2) == 'products' ? 'active' : '' }}"><a href="{{ url('admin/products') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-box"></span></span> <span>{{ __('messages.products') }}</span></a></li>
             <li class="nav-item"><span class="nav-link collapsed d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#submenu-app"><span><span class="sidebar-icon"><span class="fas fa-table"></span></span> Tables </span><span class="link-arrow"><span class="fas fa-chevron-right"></span></span></span>
                 <div class="multi-level collapse" role="list" id="submenu-app" aria-expanded="false">
                     <ul class="flex-column nav">

@@ -40,8 +40,7 @@ class ServiceController extends Controller
 
         $service->save();
 
-        return redirect()
-            ->route('admin.services.index')
+        return redirect('admin/services')
             ->with(['alert-success' => __('messages.created_success')]);
     }
 
@@ -74,8 +73,7 @@ class ServiceController extends Controller
     {
         $service->update($request->validated());
 
-        return redirect()
-            ->route('admin.services.index')
+        return redirect('admin/services')
             ->with(['alert-success' => __('messages.updated_success')]);
     }
 }

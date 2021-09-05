@@ -1,7 +1,7 @@
 <div>
     <form role="form" action="{{ $user->exists
-        ? route('admin.users.update', ['user' => $user->getKey()])
-        : route('admin.users.store') }}"
+        ? url('admin/users/update', ['user' => $user->getKey()])
+        : url('admin/users/store') }}"
         method="POST"
     >
         @method($user->exists ? 'PUT' : 'POST')

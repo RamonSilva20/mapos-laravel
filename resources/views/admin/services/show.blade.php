@@ -39,7 +39,7 @@
     </table>
 
     <div class="mt-3">
-        <a href="{{ route('admin.services.index') }}" class="btn btn-light"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
+        <a href="{{ url('admin/services') }}" class="btn btn-light"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
     </div>
 </div>
 @stop

@@ -15,11 +15,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ url('css/app.css') }}" rel="stylesheet">
     <!-- Fontawesome -->
-    <link type="text/css" href="{{ asset('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!-- Notyf -->
-    <link type="text/css" href="{{ asset('vendor/notyf/notyf.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url('vendor/notyf/notyf.min.css') }}" rel="stylesheet">
 
     @yield('css')
 
@@ -27,9 +27,9 @@
 
 </head>
 
-<body class="bg-soft">
+<body class="bg-soft theme-light">
 
-    <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-md-none"><a class="navbar-brand mr-lg-5" href="../index.html"><img class="navbar-brand-dark" src="../assets/img/brand/light.svg" alt="Volt logo"> <img class="navbar-brand-light" src="../assets/img/brand/dark.svg" alt="Volt logo"></a>
+    <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-md-none"><a class="navbar-brand mr-lg-5" href="../index.html"><img class="navbar-brand-dark" src="#" alt="Volt logo"> <img class="navbar-brand-light" src="../assets/img/brand/dark.svg" alt="Volt logo"></a>
         <div class="d-flex align-items-center"><button class="navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button></div>
     </nav>
 
@@ -52,7 +52,7 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link pt-1 px-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <div class="media d-flex align-items-center">
-                                                <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder" src="{{ asset('img/profile.png') }}">
+                                                <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder" src="{{ url('img/profile.png') }}">
                                                 <div class="media-body ml-2 text-dark align-items-center d-none d-lg-block"><span class="mb-0 font-small font-weight-bold">Admin</span></div>
                                             </div>
                                         </a>
@@ -62,9 +62,9 @@
                                             <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-envelope-open-text"></span>Messages</a>
                                             <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-user-shield"></span>Support</a>
                                             <div role="separator" class="dropdown-divider"></div>
-                                            <a class="dropdown-item font-weight-bold" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fas fa-sign-out-alt text-danger"></span>Logout</a>
+                                            <a class="dropdown-item font-weight-bold" href="{{ url('admin/logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fas fa-sign-out-alt text-danger"></span>Logout</a>
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            <form id="logout-form" action="{{ url('admin/logout') }}" method="POST" style="display: none;">
                                                 {{ csrf_field() }}
                                             </form>
 
@@ -94,26 +94,26 @@
 
     <!-- Scripts -->
     <!-- Core -->
-    <script src="{{ asset('vendor/popper.js/dist/umd/popper.min.js') }}"></script>
-    <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url('vendor/popper.js/dist/umd/popper.min.js') }}"></script>
+    <script src="{{ url('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- Vendor JS -->
-    <script src="{{ asset('vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
+    <script src="{{ url('vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
     <!-- Slider -->
-    <script src="{{ asset('vendor/nouislider/distribute/nouislider.min.js') }}"></script>
+    <script src="{{ url('vendor/nouislider/distribute/nouislider.min.js') }}"></script>
     <!-- Jarallax -->
-    <script src="{{ asset('vendor/jarallax/dist/jarallax.min.js') }}"></script>
+    <script src="{{ url('vendor/jarallax/dist/jarallax.min.js') }}"></script>
     <!-- Smooth scroll -->
-    <script src="{{ asset('vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
+    <script src="{{ url('vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
     <!-- Count up -->
-    <script src="{{ asset('vendor/countup.js/dist/countUp.umd.js') }}"></script>
+    <script src="{{ url('vendor/countup.js/dist/countUp.umd.js') }}"></script>
     <!-- Notyf -->
-    <script src="{{ asset('vendor/notyf/notyf.min.js') }}"></script>
+    <script src="{{ url('vendor/notyf/notyf.min.js') }}"></script>
     <!-- Datepicker -->
-    <!-- <script src="{{ asset('vendor/vanillajs-datepicker/dist/js/datepicker.min.js') }}"></script> -->
+    <!-- <script src="{{ url('vendor/vanillajs-datepicker/dist/js/datepicker.min.js') }}"></script> -->
     <!-- Simplebar -->
-    <script src="{{ asset('vendor/simplebar/dist/simplebar.min.js') }}"></script>
+    <script src="{{ url('vendor/simplebar/dist/simplebar.min.js') }}"></script>
 
-    <script src="{{ asset('js/app-min.js') }}" defer></script>
+    <script src="{{ url('js/app-min.js') }}" defer></script>
     @yield('js')
 
     @livewireScripts

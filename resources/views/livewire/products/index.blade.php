@@ -5,7 +5,7 @@
     <div class="row align-items-center justify-content-between mb-2">
 
         <div class="col col-sm-6 text-left">
-            <a class="btn btn-success" href="{{ route('admin.products.create') }}">
+            <a class="btn btn-success" href="{{ url('admin/products/create') }}">
                 <i class="fa fa-plus"></i> {{ __('messages.create_product') }}
             </a>
         </div>
@@ -45,8 +45,8 @@
                                     <span class="icon icon-sm"><span class="fas fa-ellipsis-h icon-dark"></span> </span>
                                     <span class="sr-only">__('messages.actions')</span></button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{ route('admin.products.show', $product) }}"><span class="fas fa-eye mr-2"></span>{{ __('messages.view') }}</a>
-                                    <a class="dropdown-item" href="{{ route('admin.products.edit', $product) }}"><span class="fas fa-edit mr-2"></span>{{ __('messages.edit') }}</a>
+                                    <a class="dropdown-item" href="{{ url('admin/products/show', $product) }}"><span class="fas fa-eye mr-2"></span>{{ __('messages.view') }}</a>
+                                    <a class="dropdown-item" href="{{ url('admin/products/edit', $product) }}"><span class="fas fa-edit mr-2"></span>{{ __('messages.edit') }}</a>
                                     <a class="dropdown-item text-danger" wire:click="destroy({{ $product->id }})" href="#"><span class="fas fa-trash-alt mr-2"></span>{{ __('messages.delete') }}</a>
                                 </div>
                             </div>
