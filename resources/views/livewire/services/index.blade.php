@@ -5,7 +5,7 @@
     <div class="row align-items-center justify-content-between mb-2">
 
         <div class="col col-sm-6 text-left">
-            <a class="btn btn-success" href="{{ url('admin/services/create') }}">
+            <a class="btn btn-success" href="{{ url('services/create') }}">
                 <i class="fa fa-plus"></i> {{ __('messages.create_service') }}
             </a>
         </div>

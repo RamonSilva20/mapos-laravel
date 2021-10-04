@@ -40,7 +40,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        return redirect('admin/products')
+        return redirect('products')
             ->with(['alert-success' => __('messages.created_success')]);
     }
 
@@ -73,7 +73,7 @@ class ProductController extends Controller
     {
         $product->update($request->validated());
 
-        return redirect('admin/products')
+        return redirect('products')
             ->with(['alert-success' => __('messages.updated_success')]);
     }
 }

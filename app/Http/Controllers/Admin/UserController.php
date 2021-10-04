@@ -48,7 +48,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('admin/users')
+        return redirect('users')
             ->with(['alert-success' => 'Usuário criado com sucesso!']);
     }
 
@@ -89,7 +89,7 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return redirect('admin/users')
+        return redirect('users')
             ->with(['alert-success' => 'Usuário editado com sucesso!']);
     }
 

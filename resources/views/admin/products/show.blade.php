@@ -50,7 +50,7 @@
     </table>
 
     <div class="mt-3">
-        <a href="{{ url('admin/products') }}" class="btn btn-light"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
+        <a href="{{ url('products') }}" class="btn btn-light"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
     </div>
 </div>
 @stop

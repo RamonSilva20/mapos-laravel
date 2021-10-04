@@ -40,7 +40,7 @@ class CustomerController extends Controller
 
         $customer->save();
 
-        return redirect('admin/customers')
+        return redirect('customers')
             ->with(['alert-success' => __('messages.created_success')]);
     }
 
@@ -73,7 +73,7 @@ class CustomerController extends Controller
     {
         $customer->update($request->validated());
 
-        return redirect('admin/customers')
+        return redirect('customers')
             ->with(['alert-success' => __('messages.updated_success')]);
     }
 }

@@ -13,12 +13,12 @@
     <meta property="og:title" content="Map-OS">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ global_asset('favicon.ico') }}">
 
     <!-- core css -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ global_asset('css/app.css') }}" rel="stylesheet">
 
-    <link type="text/css" href="{{ asset('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ global_asset('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -28,7 +28,7 @@
         @yield('content')
     </div>
 
-    <script src="{{ asset('js/app.min.js') }}"></script>
+    <script src="{{ global_asset('js/app-min.js') }}"></script>
 
 </body>
 

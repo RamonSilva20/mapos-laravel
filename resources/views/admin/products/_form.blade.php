@@ -1,6 +1,6 @@
     <form role="form" action="{{ $product->exists
-        ? url('admin/products/update', ['product' => $product->getKey()])
-        : url('admin/products/store') }}" method="POST">
+        ? url('products/update', ['product' => $product->getKey()])
+        : url('products/store') }}" method="POST">
         @method($product->exists ? 'PUT' : 'POST')
         @csrf
         <div class="row p-3">
@@ -103,6 +103,6 @@
 
         <div class="card-footer">
             <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> {{ __('messages.save') }}</button>
-            <a class="btn btn-light" href="{{ url('admin/products') }}"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
+            <a class="btn btn-light" href="{{ url('products') }}"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
         </div>
     </form>

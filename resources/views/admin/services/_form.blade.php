@@ -1,6 +1,6 @@
     <form role="form" action="{{ $service->exists
-        ? url('admin/services/update', ['service' => $service->getKey()])
-        : url('admin/services/store') }}" method="POST">
+        ? url('services/update', ['service' => $service->getKey()])
+        : url('services/store') }}" method="POST">
         @method($service->exists ? 'PUT' : 'POST')
         @csrf
 
@@ -45,6 +45,6 @@
 
         <div class="card-footer" style="padding-top: 0">
             <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> {{ @trans('messages.save') }}</button>
-            <a class="btn btn-light" href="{{ url('admin/services') }}"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
+            <a class="btn btn-light" href="{{ url('services') }}"><i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
         </div>
     </form>

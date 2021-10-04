@@ -15,11 +15,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
-    <link href="{{ url('css/app.css') }}" rel="stylesheet">
+    <link href="{{ global_asset('css/app.css') }}" rel="stylesheet">
     <!-- Fontawesome -->
-    <link type="text/css" href="{{ url('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ global_asset('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!-- Notyf -->
-    <link type="text/css" href="{{ url('vendor/notyf/notyf.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ global_asset('vendor/notyf/notyf.min.css') }}" rel="stylesheet">
 
     @yield('css')
 
@@ -62,9 +62,9 @@
                                             <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-envelope-open-text"></span>Messages</a>
                                             <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-user-shield"></span>Support</a>
                                             <div role="separator" class="dropdown-divider"></div>
-                                            <a class="dropdown-item font-weight-bold" href="{{ url('admin/logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fas fa-sign-out-alt text-danger"></span>Logout</a>
+                                            <a class="dropdown-item font-weight-bold" href="{{ url('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fas fa-sign-out-alt text-danger"></span>Logout</a>
 
-                                            <form id="logout-form" action="{{ url('admin/logout') }}" method="POST" style="display: none;">
+                                            <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                                 {{ csrf_field() }}
                                             </form>
 
@@ -94,26 +94,26 @@
 
     <!-- Scripts -->
     <!-- Core -->
-    <script src="{{ url('vendor/popper.js/dist/umd/popper.min.js') }}"></script>
-    <script src="{{ url('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ global_asset('vendor/popper.js/dist/umd/popper.min.js') }}"></script>
+    <script src="{{ global_asset('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- Vendor JS -->
-    <script src="{{ url('vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
+    <script src="{{ global_asset('vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
     <!-- Slider -->
-    <script src="{{ url('vendor/nouislider/distribute/nouislider.min.js') }}"></script>
+    <script src="{{ global_asset('vendor/nouislider/distribute/nouislider.min.js') }}"></script>
     <!-- Jarallax -->
-    <script src="{{ url('vendor/jarallax/dist/jarallax.min.js') }}"></script>
+    <script src="{{ global_asset('vendor/jarallax/dist/jarallax.min.js') }}"></script>
     <!-- Smooth scroll -->
-    <script src="{{ url('vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
+    <script src="{{ global_asset('vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
     <!-- Count up -->
-    <script src="{{ url('vendor/countup.js/dist/countUp.umd.js') }}"></script>
+    <script src="{{ global_asset('vendor/countup.js/dist/countUp.umd.js') }}"></script>
     <!-- Notyf -->
-    <script src="{{ url('vendor/notyf/notyf.min.js') }}"></script>
+    <script src="{{ global_asset('vendor/notyf/notyf.min.js') }}"></script>
     <!-- Datepicker -->
-    <!-- <script src="{{ url('vendor/vanillajs-datepicker/dist/js/datepicker.min.js') }}"></script> -->
+    <!-- <script src="{{ global_asset('vendor/vanillajs-datepicker/dist/js/datepicker.min.js') }}"></script> -->
     <!-- Simplebar -->
-    <script src="{{ url('vendor/simplebar/dist/simplebar.min.js') }}"></script>
+    <script src="{{ global_asset('vendor/simplebar/dist/simplebar.min.js') }}"></script>
 
-    <script src="{{ url('js/app-min.js') }}" defer></script>
+    <script src="{{ global_asset('js/app-min.js') }}" defer></script>
     @yield('js')
 
     @livewireScripts

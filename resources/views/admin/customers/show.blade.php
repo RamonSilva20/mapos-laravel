@@ -81,7 +81,7 @@
     </table>
 
     <div class="mt-3">
-        <a href="{{ url('admin/customers') }}" class="btn btn-light"> <i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
+        <a href="{{ url('customers') }}" class="btn btn-light"> <i class="fa fa-arrow-left"></i> {{ __('messages.go_back') }}</a>
     </div>
 
 </div>

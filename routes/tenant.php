@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Auth\LoginController;
-use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
+use Stancl\Tenancy\Middleware\InitializeTenancyByDomainOrSubdomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 
 /*
@@ -25,34 +25,27 @@ use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 |
 */
 
+
+
+
 Route::middleware([
     'web',
-    InitializeTenancyByDomain::class,
+    InitializeTenancyByDomainOrSubdomain::class,
     PreventAccessFromCentralDomains::class,
 ])
-    ->prefix('admin')
-    ->as('admin')
-    ->namespace('Admin')
     ->group(function () {
 
-        // Auth::routes([
-        //     'register' => false,
-        //     'verify' => false,
-        //     'reset' => true,
-        // ]);
+        Auth::routes([
+            'register' => false,
+            'verify' => false,
+            'reset' => true,
+        ]);
 
-        Route::get('login', [LoginController::class, 'login']);
 
         Route::middleware(['auth'])
             ->group(function () {
 
-                Route::get('logout', [LoginController::class, 'logout']);
-
-                Route::get('/', function () {
-                    return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
-                });
-
-                Route::get('/dashboard', [DashboardController::class, 'index']);
+                Route::get('/', [DashboardController::class, 'index']);
 
                 // Customers
                 Route::get('customers', [CustomerController::class, 'index']);

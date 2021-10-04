@@ -24,7 +24,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/admin/dashboard';
+    public const HOME = '/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -78,7 +78,7 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function centralDomains(): array
     {
-        return config('tenancy.central_domains');
+        return config('tenancy.central_domains', []);
     }
 
     /**
