@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     /**
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
@@ -23,7 +23,7 @@ class UserController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request)
@@ -34,7 +34,7 @@ class UserController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\Admin\UserStoreRequest $request
+     * @param  \App\Http\Requests\Admin\UserStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(UserStoreRequest $request)
@@ -53,8 +53,8 @@ class UserController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\User $user
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request, User $user)
@@ -63,8 +63,8 @@ class UserController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\User $user
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request, User $user)
@@ -73,8 +73,8 @@ class UserController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\Admin\UserUpdateRequest $request
-     * @param \App\User $user
+     * @param  \App\Http\Requests\Admin\UserUpdateRequest  $request
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
     public function update(UserUpdateRequest $request, User $user)
@@ -94,8 +94,8 @@ class UserController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\User $user
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(Request $request, User $user)

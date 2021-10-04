@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
     /**
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
@@ -20,7 +20,7 @@ class ServiceController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request)
@@ -31,7 +31,7 @@ class ServiceController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\Admin\ServiceStoreRequest $request
+     * @param  \App\Http\Requests\Admin\ServiceStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(ServiceStoreRequest $request)
@@ -45,8 +45,8 @@ class ServiceController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Service $service
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request, Service $service)
@@ -55,8 +55,8 @@ class ServiceController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Service $service
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request, Service $service)
@@ -65,8 +65,8 @@ class ServiceController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\Admin\ServiceUpdateRequest $request
-     * @param \App\Service $service
+     * @param  \App\Http\Requests\Admin\ServiceUpdateRequest  $request
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
     public function update(ServiceUpdateRequest $request, Service $service)

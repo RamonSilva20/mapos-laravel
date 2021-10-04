@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
     /**
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
@@ -20,7 +20,7 @@ class CustomerController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request)
@@ -31,7 +31,7 @@ class CustomerController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\Admin\CustomerStoreRequest $request
+     * @param  \App\Http\Requests\Admin\CustomerStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(CustomerStoreRequest $request)
@@ -45,8 +45,8 @@ class CustomerController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Customer $customer
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request, Customer $customer)
@@ -55,8 +55,8 @@ class CustomerController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Customer $customer
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request, Customer $customer)
@@ -65,8 +65,8 @@ class CustomerController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\Admin\CustomerUpdateRequest $request
-     * @param \App\Customer $customer
+     * @param  \App\Http\Requests\Admin\CustomerUpdateRequest  $request
+     * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
     public function update(CustomerUpdateRequest $request, Customer $customer)
