@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\CustomerController;
-use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\ServiceController;
-use App\Http\Controllers\Auth\LoginController;
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomainOrSubdomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 
@@ -34,7 +33,6 @@ Route::middleware([
     PreventAccessFromCentralDomains::class,
 ])
     ->group(function () {
-
         Auth::routes([
             'register' => false,
             'verify' => false,
@@ -44,7 +42,6 @@ Route::middleware([
 
         Route::middleware(['auth'])
             ->group(function () {
-
                 Route::get('/', [DashboardController::class, 'index']);
 
                 // Customers
